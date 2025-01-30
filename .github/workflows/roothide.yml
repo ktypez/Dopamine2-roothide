@@ -1,10 +1,5 @@
 name: "*** build tipa file ***"
 
-on:
-  schedule:
-    - cron: '0 */36 * * *' # every 36 hours
-  workflow_dispatch:
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
